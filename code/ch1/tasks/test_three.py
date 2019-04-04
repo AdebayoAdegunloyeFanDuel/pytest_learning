@@ -12,9 +12,16 @@ def test_defaults():
     t2 = Task(None, None, False, None)
     assert t1 == t2
 
-def test_member_access():
+def test_TuPac_access():
     """Check .field functionality of namedtuple."""
-    t = Task('buy milk', 'brian')
-    assert t.summary == 'buy milk'
-    assert t.owner == 'brian'
+    t = Task('Talked Shit', 'Tu Pac')
+    assert t.summary == 'Talked Shit'
+    assert t.owner == 'Tu Pac'
     assert (t.done, t.id) == (False, None)
+
+def test_biggie_access():
+    t = Task('Shot Tu Pac', 'Biggie')
+    assert t.summary == 'Shot Tu Pac'
+    assert t.owner == 'Biggie'
+    assert (t.done, t.id) == (False, None)
+

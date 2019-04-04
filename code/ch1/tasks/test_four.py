@@ -22,3 +22,10 @@ def test_replace():
     t_after = t_before._replace(id=10, done=True)
     t_expected = Task('finish book', 'brian', True, 10)
     assert t_after == t_expected
+
+
+def test_replace_again():
+    t_before = Task('Make sure Tu Pac Dead', 'Biggie', False)
+    t_after = t_before._replace(id=11, done=True)
+    t_expected = Task('Make sure Tu Pac Dead', 'Biggie', True, 11)
+    assert t_after == t_expected
